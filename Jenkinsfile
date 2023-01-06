@@ -7,5 +7,10 @@ pipeline {
                sh 'npm rebuild'
             }
         }
+        stage('Starting App') {
+            steps {
+                sh 'npm start'
+            }
+        }
     }
 }
