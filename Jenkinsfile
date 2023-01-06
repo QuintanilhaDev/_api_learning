@@ -7,9 +7,12 @@ pipeline {
                sh 'npm rebuild'
             }
         }
-        stage('Starting App') {
+        stage('Test'){
             steps {
-                sh 'npm start'
+                echo 'Startig app'
+                sh 'npm start &'
+                echo 'Starting test'
+                sh 'curl http://localhost:3000'
             }
         }
     }
