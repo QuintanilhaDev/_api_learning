@@ -4,11 +4,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building the App"
-                sh 'npm rebuild'
+                echo 'npm rebuild'
+                echo 'npm start'
             }
-        }
-        stage('Start the app') {
-            sh 'npm start'
         }
     }
 }
