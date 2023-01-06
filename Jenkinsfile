@@ -5,16 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                sh 'npm rebuild'
+               sh 'npm install'
             }
         }
         stage('Test'){
             steps {
-                echo 'Node package modules installing...'
-                sh 'npm install'
-                echo 'Startig app'
-                sh 'npm start'
-                echo 'Starting test'
-                sh 'curl http://localhost:3000'
+                echo 'Testing the process...'
+                sh 'npm test'
             }
         }
     }
