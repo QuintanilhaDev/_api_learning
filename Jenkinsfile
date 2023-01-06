@@ -12,7 +12,7 @@ pipeline {
                 echo 'Node package modules installing...'
                 sh 'npm install'
                 echo 'Startig app'
-                sh 'npm start &'
+                sh 'npm start'
                 echo 'Starting test'
                 sh 'curl http://localhost:3000'
             }
