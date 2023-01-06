@@ -3,7 +3,7 @@ const userRoute = require('./routes/_user_routes')
 const app = express()
 const port = 3000
 
-userRoute(app)
+// userRoute(app)
 
 app.get('/', (req, res) => res.send("Olá mundo!"))
 
