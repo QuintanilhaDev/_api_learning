@@ -1,11 +1,10 @@
 pipeline {
     agent any
+    tools {nodejs "nodejs"}
     stages {
         stage('Build') {
             steps {
-                echo "Building the App"
-                echo 'npm rebuild'
-                echo 'npm start'
+               sh "npm rebuild"
             }
         }
     }
