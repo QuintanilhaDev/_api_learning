@@ -13,7 +13,7 @@ pipeline {
                 echo 'Startig app'
                 sh 'npm start'
                 echo 'Starting test'
-                sh 'curl http://localhost:3000'
+                sh 'curl http://localhost:80'
             }
         }
     }
